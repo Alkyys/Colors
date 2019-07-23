@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Palette de couleur</router-link> |
+      <router-link to="/degrade">Degrade</router-link>
     </div>
     <router-view/>
   </div>
@@ -15,10 +15,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #F8F6F4;
 }
 #nav {
   padding: 30px;
   a {
+    list-style: none;
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
