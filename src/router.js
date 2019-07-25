@@ -5,6 +5,7 @@ import Home from './views/Palette_de_couleur.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
