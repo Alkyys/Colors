@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import pathify, { make } from 'vuex-pathify'
 
 Vue.use(Vuex)
 
@@ -14,16 +15,7 @@ const getters = {
   }
 }
 
-const mutations = {
-  SET_CURRENT_PAGE (state, payload) {
-    console.log('TCL: SET_CURRENT_PAGE -> state', state)
-    state.currentPage = payload.currentPage
-  },
-
-  SET_ITEMS (state, payload) {
-    state.items = payload.items
-  }
-}
+const mutations = make.mutations(state)
 
 const actions = {
   changeCurrentPage ({ commit, state }, payload) {
